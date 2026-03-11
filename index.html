@@ -5,6 +5,16 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- Google Ads Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17984119313"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'AW-17984119313');
+</script>
+
 <title>Transporte de Veículos para Todo o Brasil | Brilhante Transportes</title>
 
 <meta name="description" content="Transporte de veículos para todo o Brasil com segurança, seguro incluso e logística especializada. Simule o valor do frete online.">
@@ -329,7 +339,7 @@ Simule online o valor para transportar carro para outro estado, frete de veícul
 
 <div id="resultado"></div>
 <div id="whatsapp-container">
-<a id="whatsapp-link" target="_blank">Prosseguir no WhatsApp</a>
+<a id="whatsapp-link" target="_blank" onclick="registrarConversao()">
 </div>
 </section>
 
@@ -488,7 +498,11 @@ showSlide(slideIndex);
 
 document.querySelector('.seta-dir').addEventListener('click',nextSlide);
 document.querySelector('.seta-esq').addEventListener('click',prevSlide);
-
+function registrarConversao(){
+gtag('event', 'conversion', {
+'send_to': 'AW-17984119313/CONVERSAO_AQUI'
+});
+}
 </script>
 
 </body>
